@@ -1,0 +1,604 @@
+version 3
+run General-0-20221201-23:19:33-465314
+attr configname General
+attr datetime 20221201-23:19:33
+attr datetimef 20221201-231933
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lb_network
+attr processid 465314
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network lb_network
+config **.limit 200
+config **.ComputeNodeSize 12
+config **.RackLBNodeSize 3
+config **.NetworkLBNodeSize 1
+config **.OutsideNodeSize 1
+config **.OutsideNodeDelay "truncnormal(0.01, 0.009)"
+config **.ComputeNodeDelay "truncnormal(0.1, 0.05)"
+
+par lb_network.worker_0[0].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_0[0].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_0[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[0].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[0].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_1[0].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_1[0].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_1[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[1].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[1].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_2[0].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_2[0].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_2[0].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[2].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[2].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_0[1].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_0[1].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_0[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[0].gate$o[1].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[0].gate$o[1].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[0].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_1[1].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_1[1].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_1[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[1].gate$o[1].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[1].gate$o[1].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[1].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_2[1].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_2[1].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_2[1].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[2].gate$o[1].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[2].gate$o[1].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[2].gate$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_0[2].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_0[2].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_0[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[0].gate$o[2].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[0].gate$o[2].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[0].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_1[2].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_1[2].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_1[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[1].gate$o[2].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[1].gate$o[2].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[1].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_2[2].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_2[2].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_2[2].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[2].gate$o[2].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[2].gate$o[2].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[2].gate$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_0[3].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_0[3].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_0[3].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[0].gate$o[3].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[0].gate$o[3].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[0].gate$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_1[3].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_1[3].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_1[3].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[1].gate$o[3].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[1].gate$o[3].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[1].gate$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.worker_2[3].gate$o[0].channel typename "\"lb_network.RackChannel\""
+par lb_network.worker_2[3].gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.worker_2[3].gate$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[2].gate$o[3].channel typename "\"lb_network.RackChannel\""
+par lb_network.rack_lb[2].gate$o[3].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[2].gate$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[0].gate$o[4].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.rack_lb[0].gate$o[4].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[0].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.network_lb.gate$o[0].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.network_lb.gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.network_lb.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[1].gate$o[4].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.rack_lb[1].gate$o[4].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[1].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.network_lb.gate$o[1].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.network_lb.gate$o[1].channel disabled false
+attr mutable ""
+par lb_network.network_lb.gate$o[1].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.rack_lb[2].gate$o[4].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.rack_lb[2].gate$o[4].channel disabled false
+attr mutable ""
+par lb_network.rack_lb[2].gate$o[4].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.network_lb.gate$o[2].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.network_lb.gate$o[2].channel disabled false
+attr mutable ""
+par lb_network.network_lb.gate$o[2].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.outsider.gate$o[0].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.outsider.gate$o[0].channel disabled false
+attr mutable ""
+par lb_network.outsider.gate$o[0].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.network_lb.gate$o[3].channel typename "\"lb_network.NetworkChannel\""
+par lb_network.network_lb.gate$o[3].channel disabled false
+attr mutable ""
+par lb_network.network_lb.gate$o[3].channel delay 0.1s
+attr mutable ""
+attr unit s
+par lb_network.worker_0[0] typename "\"ComputeNode\""
+par lb_network.worker_0[0] limit 200
+par lb_network.worker_0[0] ComputeNodeSize 12
+par lb_network.worker_0[0] RackLBNodeSize 3
+par lb_network.worker_0[0] NetworkLBNodeSize 1
+par lb_network.worker_0[0] OutsideNodeSize 1
+par lb_network.worker_0[0] OutsideNodeDelay 0.000523088
+par lb_network.worker_0[0] ComputeNodeDelay 0.144239
+statistic lb_network.worker_0[0] "msg queue length"
+field count 48
+field mean 9.9583333333333
+field stddev 5.5580431782806
+field min 0
+field max 19
+field sum 478
+field sqrsum 6212
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	2
+bin	3	2
+bin	4	3
+bin	5	3
+bin	6	2
+bin	7	3
+bin	8	3
+bin	9	2
+bin	10	2
+bin	11	2
+bin	12	3
+bin	13	3
+bin	14	2
+bin	15	3
+bin	16	3
+bin	17	2
+bin	18	3
+bin	19	2
+bin	20	0
+bin	21	0
+bin	22	0
+bin	23	0
+bin	24	0
+par lb_network.worker_0[1] typename "\"ComputeNode\""
+par lb_network.worker_0[1] limit 200
+par lb_network.worker_0[1] ComputeNodeSize 12
+par lb_network.worker_0[1] RackLBNodeSize 3
+par lb_network.worker_0[1] NetworkLBNodeSize 1
+par lb_network.worker_0[1] OutsideNodeSize 1
+par lb_network.worker_0[1] OutsideNodeDelay 0.0176731
+par lb_network.worker_0[1] ComputeNodeDelay 0.135994
+statistic lb_network.worker_0[1] "msg queue length"
+field count 38
+field mean 6.7631578947368
+field stddev 3.7663819510802
+field min 0
+field max 13
+field sum 257
+field sqrsum 2263
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	3
+bin	3	3
+bin	4	3
+bin	5	4
+bin	6	3
+bin	7	2
+bin	8	3
+bin	9	3
+bin	10	3
+bin	11	3
+bin	12	3
+bin	13	2
+bin	14	0
+bin	15	0
+bin	16	0
+bin	17	0
+par lb_network.worker_0[2] typename "\"ComputeNode\""
+par lb_network.worker_0[2] limit 200
+par lb_network.worker_0[2] ComputeNodeSize 12
+par lb_network.worker_0[2] RackLBNodeSize 3
+par lb_network.worker_0[2] NetworkLBNodeSize 1
+par lb_network.worker_0[2] OutsideNodeSize 1
+par lb_network.worker_0[2] OutsideNodeDelay 0.00325904
+par lb_network.worker_0[2] ComputeNodeDelay 0.0461421
+statistic lb_network.worker_0[2] "msg queue length"
+field count 46
+field mean 1.8478260869565
+field stddev 1.246637990835
+field min 0
+field max 4
+field sum 85
+field sqrsum 227
+bin	-inf	0
+bin	0	7
+bin	1	13
+bin	2	11
+bin	3	10
+bin	4	5
+bin	5	0
+par lb_network.worker_0[3] typename "\"ComputeNode\""
+par lb_network.worker_0[3] limit 200
+par lb_network.worker_0[3] ComputeNodeSize 12
+par lb_network.worker_0[3] RackLBNodeSize 3
+par lb_network.worker_0[3] NetworkLBNodeSize 1
+par lb_network.worker_0[3] OutsideNodeSize 1
+par lb_network.worker_0[3] OutsideNodeDelay 0.0071588
+par lb_network.worker_0[3] ComputeNodeDelay 0.198816
+statistic lb_network.worker_0[3] "msg queue length"
+field count 26
+field mean 5.7307692307692
+field stddev 2.9605093116921
+field min 0
+field max 10
+field sum 149
+field sqrsum 1073
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	2
+bin	3	2
+bin	4	2
+bin	5	2
+bin	6	2
+bin	7	3
+bin	8	5
+bin	9	4
+bin	10	1
+bin	11	0
+bin	12	0
+bin	13	0
+par lb_network.worker_1[0] typename "\"ComputeNode\""
+par lb_network.worker_1[0] limit 200
+par lb_network.worker_1[0] ComputeNodeSize 12
+par lb_network.worker_1[0] RackLBNodeSize 3
+par lb_network.worker_1[0] NetworkLBNodeSize 1
+par lb_network.worker_1[0] OutsideNodeSize 1
+par lb_network.worker_1[0] OutsideNodeDelay 0.00671228
+par lb_network.worker_1[0] ComputeNodeDelay 0.0513101
+statistic lb_network.worker_1[0] "msg queue length"
+field count 22
+field mean 1.2272727272727
+field stddev 1.1097755320792
+field min 0
+field max 4
+field sum 27
+field sqrsum 59
+bin	-inf	0
+bin	0	6
+bin	1	9
+bin	2	4
+bin	3	2
+bin	4	1
+bin	5	0
+par lb_network.worker_1[1] typename "\"ComputeNode\""
+par lb_network.worker_1[1] limit 200
+par lb_network.worker_1[1] ComputeNodeSize 12
+par lb_network.worker_1[1] RackLBNodeSize 3
+par lb_network.worker_1[1] NetworkLBNodeSize 1
+par lb_network.worker_1[1] OutsideNodeSize 1
+par lb_network.worker_1[1] OutsideNodeDelay 0.0160702
+par lb_network.worker_1[1] ComputeNodeDelay 0.0391385
+statistic lb_network.worker_1[1] "msg queue length"
+field count 32
+field mean 1
+field stddev 0.87988269012812
+field min 0
+field max 3
+field sum 32
+field sqrsum 56
+bin	-inf	0
+bin	0	10
+bin	1	14
+bin	2	6
+bin	3	2
+bin	4	0
+par lb_network.worker_1[2] typename "\"ComputeNode\""
+par lb_network.worker_1[2] limit 200
+par lb_network.worker_1[2] ComputeNodeSize 12
+par lb_network.worker_1[2] RackLBNodeSize 3
+par lb_network.worker_1[2] NetworkLBNodeSize 1
+par lb_network.worker_1[2] OutsideNodeSize 1
+par lb_network.worker_1[2] OutsideNodeDelay 0.000886061
+par lb_network.worker_1[2] ComputeNodeDelay 0.158684
+statistic lb_network.worker_1[2] "msg queue length"
+field count 28
+field mean 4.1428571428571
+field stddev 2.5634797778466
+field min 0
+field max 9
+field sum 116
+field sqrsum 658
+bin	-inf	0
+bin	0	1
+bin	1	4
+bin	2	5
+bin	3	3
+bin	4	2
+bin	5	3
+bin	6	4
+bin	7	3
+bin	8	2
+bin	9	1
+bin	10	0
+bin	11	0
+bin	12	0
+par lb_network.worker_1[3] typename "\"ComputeNode\""
+par lb_network.worker_1[3] limit 200
+par lb_network.worker_1[3] ComputeNodeSize 12
+par lb_network.worker_1[3] RackLBNodeSize 3
+par lb_network.worker_1[3] NetworkLBNodeSize 1
+par lb_network.worker_1[3] OutsideNodeSize 1
+par lb_network.worker_1[3] OutsideNodeDelay 0.00819669
+par lb_network.worker_1[3] ComputeNodeDelay 0.0872535
+statistic lb_network.worker_1[3] "msg queue length"
+field count 30
+field mean 3.9666666666667
+field stddev 2.0254132542705
+field min 0
+field max 8
+field sum 119
+field sqrsum 591
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	5
+bin	3	6
+bin	4	3
+bin	5	5
+bin	6	5
+bin	7	2
+bin	8	1
+bin	9	0
+bin	10	0
+par lb_network.worker_2[0] typename "\"ComputeNode\""
+par lb_network.worker_2[0] limit 200
+par lb_network.worker_2[0] ComputeNodeSize 12
+par lb_network.worker_2[0] RackLBNodeSize 3
+par lb_network.worker_2[0] NetworkLBNodeSize 1
+par lb_network.worker_2[0] OutsideNodeSize 1
+par lb_network.worker_2[0] OutsideNodeDelay 0.0087695
+par lb_network.worker_2[0] ComputeNodeDelay 0.191133
+statistic lb_network.worker_2[0] "msg queue length"
+field count 38
+field mean 6.9736842105263
+field stddev 4.0502708758615
+field min 0
+field max 14
+field sum 265
+field sqrsum 2455
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	2
+bin	3	4
+bin	4	4
+bin	5	3
+bin	6	3
+bin	7	2
+bin	8	3
+bin	9	3
+bin	10	2
+bin	11	2
+bin	12	2
+bin	13	3
+bin	14	2
+bin	15	0
+bin	16	0
+bin	17	0
+bin	18	0
+par lb_network.worker_2[1] typename "\"ComputeNode\""
+par lb_network.worker_2[1] limit 200
+par lb_network.worker_2[1] ComputeNodeSize 12
+par lb_network.worker_2[1] RackLBNodeSize 3
+par lb_network.worker_2[1] NetworkLBNodeSize 1
+par lb_network.worker_2[1] OutsideNodeSize 1
+par lb_network.worker_2[1] OutsideNodeDelay 0.019929
+par lb_network.worker_2[1] ComputeNodeDelay 0.169182
+statistic lb_network.worker_2[1] "msg queue length"
+field count 22
+field mean 2.7727272727273
+field stddev 1.7163587753985
+field min 0
+field max 6
+field sum 61
+field sqrsum 231
+bin	-inf	0
+bin	0	2
+bin	1	4
+bin	2	4
+bin	3	4
+bin	4	4
+bin	5	3
+bin	6	1
+bin	7	0
+bin	8	0
+par lb_network.worker_2[2] typename "\"ComputeNode\""
+par lb_network.worker_2[2] limit 200
+par lb_network.worker_2[2] ComputeNodeSize 12
+par lb_network.worker_2[2] RackLBNodeSize 3
+par lb_network.worker_2[2] NetworkLBNodeSize 1
+par lb_network.worker_2[2] OutsideNodeSize 1
+par lb_network.worker_2[2] OutsideNodeDelay 0.0150709
+par lb_network.worker_2[2] ComputeNodeDelay 0.0448303
+statistic lb_network.worker_2[2] "msg queue length"
+field count 30
+field mean 1.3666666666667
+field stddev 1.0980651740388
+field min 0
+field max 4
+field sum 41
+field sqrsum 91
+bin	-inf	0
+bin	0	7
+bin	1	11
+bin	2	7
+bin	3	4
+bin	4	1
+bin	5	0
+par lb_network.worker_2[3] typename "\"ComputeNode\""
+par lb_network.worker_2[3] limit 200
+par lb_network.worker_2[3] ComputeNodeSize 12
+par lb_network.worker_2[3] RackLBNodeSize 3
+par lb_network.worker_2[3] NetworkLBNodeSize 1
+par lb_network.worker_2[3] OutsideNodeSize 1
+par lb_network.worker_2[3] OutsideNodeDelay 0.00322659
+par lb_network.worker_2[3] ComputeNodeDelay 0.0953971
+statistic lb_network.worker_2[3] "msg queue length"
+field count 40
+field mean 5.75
+field stddev 2.7056446219917
+field min 0
+field max 11
+field sum 230
+field sqrsum 1608
+bin	-inf	0
+bin	0	1
+bin	1	2
+bin	2	3
+bin	3	3
+bin	4	3
+bin	5	5
+bin	6	6
+bin	7	6
+bin	8	5
+bin	9	3
+bin	10	2
+bin	11	1
+bin	12	0
+bin	13	0
+bin	14	0
+par lb_network.rack_lb[0] typename "\"RackLBNode\""
+par lb_network.rack_lb[0] limit 200
+par lb_network.rack_lb[0] ComputeNodeSize 12
+par lb_network.rack_lb[0] RackLBNodeSize 3
+par lb_network.rack_lb[0] NetworkLBNodeSize 1
+par lb_network.rack_lb[0] OutsideNodeSize 1
+par lb_network.rack_lb[1] typename "\"RackLBNode\""
+par lb_network.rack_lb[1] limit 200
+par lb_network.rack_lb[1] ComputeNodeSize 12
+par lb_network.rack_lb[1] RackLBNodeSize 3
+par lb_network.rack_lb[1] NetworkLBNodeSize 1
+par lb_network.rack_lb[1] OutsideNodeSize 1
+par lb_network.rack_lb[2] typename "\"RackLBNode\""
+par lb_network.rack_lb[2] limit 200
+par lb_network.rack_lb[2] ComputeNodeSize 12
+par lb_network.rack_lb[2] RackLBNodeSize 3
+par lb_network.rack_lb[2] NetworkLBNodeSize 1
+par lb_network.rack_lb[2] OutsideNodeSize 1
+par lb_network.network_lb typename "\"NetworkLBNode\""
+par lb_network.network_lb limit 200
+par lb_network.network_lb ComputeNodeSize 12
+par lb_network.network_lb RackLBNodeSize 3
+par lb_network.network_lb NetworkLBNodeSize 1
+par lb_network.network_lb OutsideNodeSize 1
+par lb_network.outsider typename "\"OutsideNode\""
+par lb_network.outsider limit 200
+par lb_network.outsider ComputeNodeSize 12
+par lb_network.outsider RackLBNodeSize 3
+par lb_network.outsider NetworkLBNodeSize 1
+par lb_network.outsider OutsideNodeSize 1
+par lb_network.outsider OutsideNodeDelay 0.00513079
+par lb_network.outsider ComputeNodeDelay 0.106509
+par lb_network typename "\"lb_network\""
+

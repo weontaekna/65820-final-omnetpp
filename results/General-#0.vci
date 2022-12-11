@@ -1,0 +1,53 @@
+file 10757 1669936871                                           
+version 3
+run General-0-20221201-23:19:33-465314
+attr configname General
+attr datetime 20221201-23:19:33
+attr datetimef 20221201-231933
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network lb_network
+attr processid 465314
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network lb_network
+config **.limit 200
+config **.ComputeNodeSize 12
+config **.RackLBNodeSize 3
+config **.NetworkLBNodeSize 1
+config **.OutsideNodeSize 1
+config **.OutsideNodeDelay "truncnormal(0.01, 0.009)"
+config **.ComputeNodeDelay "truncnormal(0.1, 0.05)"
+
+vector 0 lb_network.worker_2[1] queueLengthVector ETV
+vector 1 lb_network.worker_0[2] queueLengthVector ETV
+vector 2 lb_network.worker_2[0] queueLengthVector ETV
+vector 3 lb_network.worker_1[1] queueLengthVector ETV
+vector 4 lb_network.worker_1[2] queueLengthVector ETV
+vector 5 lb_network.worker_2[3] queueLengthVector ETV
+vector 6 lb_network.worker_2[2] queueLengthVector ETV
+vector 7 lb_network.worker_1[0] queueLengthVector ETV
+vector 8 lb_network.worker_0[3] queueLengthVector ETV
+vector 9 lb_network.worker_0[0] queueLengthVector ETV
+vector 10 lb_network.worker_0[1] queueLengthVector ETV
+vector 11 lb_network.worker_1[3] queueLengthVector ETV
+0	1329 505 66 1450 0.21 2.184008775895 22 0 6 61 231
+1	1834 1065 70 1252 0.215130787347 1.354025690169 46 0 4 85 227
+2	2899 901 74 1594 0.220261574694 3.851790261305 38 0 14 265 2455
+3	3800 739 82 1214 0.230523149388 1.265034415555 32 0 3 32 56
+4	4539 656 94 1490 0.245915511429 2.467488722937 28 0 9 116 658
+5	5195 932 98 1445 0.251046298776 2.158988399756 40 0 11 230 1608
+6	6127 696 102 1195 0.256177086123 1.220508619002 30 0 4 41 91
+7	6823 510 117 1150 0.271569448164 1.174590285021 22 0 4 27 59
+8	7333 607 138 1536 0.297223384899 2.881837123138 26 0 10 149 1073
+9	7940 1145 154 1591 0.31261574694 3.774352685844 48 0 19 478 6212
+10	9085 941 193 1545 0.353662045716 2.937554419551 38 0 13 257 2263
+11	10026 730 307 1365 0.461408580003 1.770210484323 30 0 8 119 591
+
